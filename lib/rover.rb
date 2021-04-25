@@ -2,22 +2,15 @@ require 'pry'
 class Rover 
   include Grid
 
-  def initialize(name)
+  def initialize(name,plateau)
     @name = name
+    @plateau = plateau
     @position = nil
     @direction = nil
   end
 
   def name 
     @name
-  end
-
-  def position
-    @position.current
-  end
-
-  def direction
-    @direction.current.to_s.upcase
   end
 
   def location
@@ -35,14 +28,10 @@ class Rover
     arr = string.split('')
     arr.each do |step|
       if step == 'M'
-        if @direction.current == :n
-          @position.y += 1
-        elsif @direction.current == :e
-          @position.x += 1
-        elsif @direction.current == :s
-          @position.y -= 1
-        elsif @direction.current == :w
-          @position.x += 1
+        if x_limit && y_limit
+          step_forward
+        else
+          raise "Out of boundary traversing"
         end
       elsif step == 'L'
         @direction.left
@@ -52,4 +41,34 @@ class Rover
       end
     end
   end
+
+  private 
+
+  def position
+    @position.current
+  end
+
+  def direction
+    @direction.current.to_s.upcase
+  end
+
+  def step_forward
+    if @direction.current == :n
+      @position.y += 1
+    elsif @direction.current == :e
+      @position.x += 1
+    elsif @direction.current == :s
+      @position.y -= 1
+    elsif @direction.current == :w
+      @position.x -= 1
+    end
+  end
+
+  def x_limit
+    @plateau.x_limit > @position.x && @position.x > 0
+  end 
+
+  def y_limit
+    @plateau.y_limit > @position.y && @position.y > 0
+  end 
 end

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Rover do
   before(:each) do 
-    @plateau = Plateau.new(5,5)
+    @plateau = Plateau.new('5 5')
     @rover1 = Rover.new("Rover 1", @plateau)
     @rover1.land('1 2 N')
   end

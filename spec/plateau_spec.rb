@@ -1,7 +1,7 @@
 
 describe Plateau do
   before(:each) do
-    @plateau = Plateau.new(5,5)
+    @plateau = Plateau.new('5 5')
   end
 
   describe '.x_limit' do 

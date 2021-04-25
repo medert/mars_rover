@@ -100,3 +100,4 @@ RSpec.configure do |config|
 end
 
 require_relative '../lib/direction'
+require_relative '../lib/coordinate_grid'

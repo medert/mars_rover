@@ -1,12 +1,15 @@
 
   class Plateau
     def initialize(x,y)
-      @x = x
-      @y = y
-      @plane = Array.new(@x) {Array.new(@x,nil)}
+      @x_limit = x - 1
+      @y_limit = y - 1
     end
 
-    def plane
-      @plane
+    def x_limit
+      @x_limit
+    end
+
+    def y_limit
+      @y_limit
     end
   end

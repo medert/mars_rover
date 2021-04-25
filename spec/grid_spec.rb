@@ -1,4 +1,29 @@
 require 'spec_helper'
+include Grid
+
+describe Position do
+  before (:each) do 
+    @position = Position.new(1,2)
+  end
+
+  describe 'current' do
+    it "should return Grid of current position" do
+      expect(@position.current).to eq('1 2')
+    end
+  end
+end
+
+describe Plateau do
+  before(:each) do
+    @plateau = Plateau.new(5,5)
+  end
+
+  describe 'size' do 
+    it "should return the area of plateau" do
+      expect(@plateau.plane).to be_an_instance_of(Array)
+    end
+  end
+end
 
 describe Direction do 
   before(:each) do

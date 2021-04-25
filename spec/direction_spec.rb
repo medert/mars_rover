@@ -13,7 +13,7 @@ describe Direction do
   describe 'left' do
     it "should return a direction on the left" do
       expect(@direction.left).to eq(:w)
-      expect(@direction.current).to eq(:e)
+      expect(@direction.current).to eq(:w)
     end
   end
 

@@ -27,7 +27,7 @@ module Grid
     FACINGS = [:n,:e,:s,:w]
 
     def initialize(current)
-      @current = current
+      @current = current.downcase
     end
 
     def current 

@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe CoordinateGrid do
   before (:each) do 
-    @direction = Direction.new(:n)
     @position = CoordinateGrid.new(1,2)
   end
 

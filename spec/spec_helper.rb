@@ -99,5 +99,9 @@ RSpec.configure do |config|
 =end
 end
 
+
 require_relative '../lib/direction'
 require_relative '../lib/coordinate_grid'
+require_relative '../lib/plateau'
+
+include Grid

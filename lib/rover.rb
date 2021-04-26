@@ -65,10 +65,10 @@ class Rover
   end
 
   def x_limit
-    @plateau.x_limit > @position.x && @position.x > 0
+    @plateau.x_limit > @position.x && @position.x >= 0
   end 
 
   def y_limit
-    @plateau.y_limit > @position.y && @position.y > 0
+    @plateau.y_limit > @position.y && @position.y >= 0
   end 
 end

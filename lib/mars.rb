@@ -1,5 +1,5 @@
 require 'pry'
-require_relative './lib/grid'
-require_relative './lib/plateau'
-require_relative './lib/rover'
+require_relative './grid'
+require_relative './plateau'
+require_relative './rover'
 include Grid

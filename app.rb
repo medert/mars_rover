@@ -1,8 +1,5 @@
-require 'pry'
-require_relative './lib/grid'
-require_relative './lib/plateau'
-require_relative './lib/rover'
-include Grid
+
+require_relative './lib/mars'
 
 MENU = ["[1] - Input command sequences via command line",
         "[2] - Input command sequences via .txt file"]

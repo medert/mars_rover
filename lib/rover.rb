@@ -21,7 +21,7 @@ class Rover
     arr = string.split(' ')
     @position = Position.new(arr[0].to_i,arr[1].to_i)
     @direction = Direction.new(arr[2].to_sym)
-    return true
+    return self
   end
 
   def move(string)

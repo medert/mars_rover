@@ -8,6 +8,9 @@ describe Rover do
   end
 
   describe ".land" do
+    it "should return rover object" do
+      expect(@rover1.land('1 2 N')).to eq(@rover1)
+    end
     it "should define rover's position and facing direction" do
       expect(@rover1.location).to eq('1 2 N')
     end

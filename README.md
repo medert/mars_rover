@@ -5,14 +5,11 @@ Install [bundle](http://bundler.io/)
       git clone https://github.com/medert/mars_rover.git
       cd mars_rover
       bundle install
+      ruby app.rb
 
 ## Testing
 
-Install [bundle](http://bundler.io/)
-
-      https://github.com/medert/mars_rover.git
-      cd mars_rover
-      bundle install
+Install [rspec](https://rspec.info)
 
 Run Unit Test Examples
 

@@ -6,13 +6,13 @@ describe Plateau do
 
   describe '.x_limit' do 
     it "should return x_limit" do
-      expect(@plateau.x_limit).to eq(4)
+      expect(@plateau.x_limit).to eq(5)
     end
   end
 
   describe '.y_limit' do 
     it "should return x_limit" do
-      expect(@plateau.y_limit).to eq(4)
+      expect(@plateau.y_limit).to eq(5)
     end
   end
 end

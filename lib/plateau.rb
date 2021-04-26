@@ -2,8 +2,8 @@
   class Plateau
     def initialize(string)
       arr = string.split(' ').map(&:to_i)
-      @x_limit = arr[0] - 1
-      @y_limit = arr[1] - 1
+      @x_limit = arr[0]
+      @y_limit = arr[1]
     end
 
     def x_limit
